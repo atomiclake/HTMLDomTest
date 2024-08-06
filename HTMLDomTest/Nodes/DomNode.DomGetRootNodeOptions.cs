@@ -2,7 +2,7 @@
 
 namespace HTMLDomTest;
 
-public partial class DomNode
+public abstract partial class DomNode
 {
     public readonly struct DomGetRootNodeOptions
     {

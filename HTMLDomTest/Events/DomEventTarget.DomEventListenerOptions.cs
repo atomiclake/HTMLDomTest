@@ -1,6 +1,6 @@
 ﻿using HTMLDomTest.LanguageAttributes;
 
-namespace HTMLDomTest;
+namespace HTMLDomTest.Events;
 
 public partial class DomEventTarget
 {
@@ -8,6 +8,6 @@ public partial class DomEventTarget
     public class DomEventListenerOptions
     {
         [DomName("capture")]
-        public bool? Capture { get; init; }
+        public bool Capture { get; init; }
     }
 }

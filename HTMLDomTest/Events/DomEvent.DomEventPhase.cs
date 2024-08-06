@@ -1,6 +1,6 @@
-﻿namespace HTMLDomTest;
+﻿namespace HTMLDomTest.Events;
 
-public partial class DomEvent
+public abstract partial class DomEvent
 {
     public enum DomEventPhase : ushort
     {

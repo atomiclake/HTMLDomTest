@@ -1,8 +1,10 @@
 ﻿using HTMLDomTest.LanguageAttributes;
+using HTMLDomTest.Types;
 
-namespace HTMLDomTest;
+namespace HTMLDomTest.Events.DomEvents;
 
 [DomInterface("AbortSignal")]
+[DomImplementedInterfaces([nameof(DomEventTarget)])]
 public class DomAbortSignal : DomEventTarget
 {
     [DomName("aborted")]
@@ -12,7 +14,7 @@ public class DomAbortSignal : DomEventTarget
     public object? Reason { get; init; }
 
     [DomName("onabort")]
-    public Func<DomEvent, object?> OnAbort { get; init; }
+    public DomEventHandler OnAbort { get; init; }
 
     [DomName("abort")]
     public static DomAbortSignal Abort(

@@ -1,6 +1,7 @@
-﻿using HTMLDomTest.LanguageAttributes;
+﻿using HTMLDomTest.Events.DomEvents;
+using HTMLDomTest.LanguageAttributes;
 
-namespace HTMLDomTest;
+namespace HTMLDomTest.Events;
 
 public partial class DomEventTarget
 {
@@ -14,6 +15,6 @@ public partial class DomEventTarget
         public bool? Passive { get; init; }
 
         [DomName("signal")]
-        public DomAbortSignal AbortSignal { get; init; }
+        public DomAbortSignal? Signal { get; init; }
     }
 }
