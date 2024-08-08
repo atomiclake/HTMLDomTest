@@ -1,7 +1,9 @@
 ﻿using HTMLDomTest.Events;
 using HTMLDomTest.LanguageAttributes;
+using HTMLDomTest.Nodes.CharacterData;
 using HTMLDomTest.Nodes.Documents;
 using HTMLDomTest.Nodes.Elements;
+using HTMLDomTest.Nodes.Text;
 using HTMLDomTest.Types;
 
 namespace HTMLDomTest;
@@ -98,6 +100,11 @@ public abstract partial class DomNode : DomEventTarget, IDomTree<DomNode>
             _parent._children[index + 1];
     }
 
+    private string LocateNamespace(string namespaceUri)
+    {
+        throw new NotImplementedException();
+    }
+
     [DomName("getRootNode")]
     public DomNode GetRootNode(
         [DomName("options")] DomGetRootNodeOptions? options = null)
@@ -156,13 +163,18 @@ public abstract partial class DomNode : DomEventTarget, IDomTree<DomNode>
     public bool Contains(
         [DomName("other")] DomNode? other)
     {
-        throw new NotImplementedException();
+        return other is not null && other.IsInclusiveDescendant(this);
     }
 
     [DomName("lookupPrefix")]
     public string? LookupPrefix(
        [DomName("namespace")] string? namespaceUri)
     {
+        if (string.IsNullOrWhiteSpace(namespaceUri))
+        {
+            return null;
+        }
+
         throw new NotImplementedException();
     }
 
@@ -324,7 +336,7 @@ public abstract partial class DomNode : DomEventTarget, IDomTree<DomNode>
 
     public bool IsPreceding(DomNode node)
     {
-
+        throw new NotImplementedException();
     }
 
     public bool IsFollowing(DomNode node)

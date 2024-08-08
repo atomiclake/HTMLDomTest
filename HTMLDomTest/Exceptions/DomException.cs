@@ -2,7 +2,7 @@
 
 namespace HTMLDomTest.Exceptions;
 
-[DomInterface("DomException")]
+[DomInterface("DOMException")]
 public partial class DomException : IDomExceptionBuilder<DomException>
 {
     private static readonly string[] EXCEPTION_NAMES_TABLE = [
@@ -93,5 +93,7 @@ public partial class DomException : IDomExceptionBuilder<DomException>
         DomException value = new(builderParams.Name, builderParams.Message);
 
         ArgumentException.ThrowIfNullOrEmpty(builderParams.Name, nameof(builderParams.Name));
+
+        return value;
     }
 }

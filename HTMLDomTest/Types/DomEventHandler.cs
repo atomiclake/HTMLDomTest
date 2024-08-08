@@ -1,4 +1,5 @@
-﻿using HTMLDomTest.Nodes.Elements;
+﻿using HTMLDomTest.Events;
+using HTMLDomTest.Nodes.Elements;
 
 namespace HTMLDomTest.Types;
 

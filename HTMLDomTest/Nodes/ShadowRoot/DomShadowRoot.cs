@@ -1,4 +1,5 @@
-﻿using HTMLDomTest.Nodes.Documents;
+﻿using HTMLDomTest.Events;
+using HTMLDomTest.Nodes.Documents;
 
 namespace HTMLDomTest;
 
