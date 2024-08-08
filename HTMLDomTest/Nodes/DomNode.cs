@@ -233,7 +233,12 @@ public abstract partial class DomNode : DomEventTarget, IDomTree<DomNode>
     public DomNode AppendChild(
         [DomName("node")] DomNode node)
     {
-        throw new NotImplementedException();
+        if (_parent is not null && _parent.FirstChild is not null)
+        {
+            InsertBefore(_parent.FirstChild, node);
+        }
+
+        return node;
     }
 
     [DomName("replaceChild")]
