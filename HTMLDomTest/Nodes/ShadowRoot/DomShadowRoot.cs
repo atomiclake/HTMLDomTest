@@ -6,17 +6,11 @@ namespace HTMLDomTest;
 public partial class DomShadowRoot : DomDocumentFragment
 {
     internal DomShadowRootMode _mode;
-
     internal bool _delegateFocus;
-
     internal bool _availableToElementsInternal;
-
     internal bool _declarative;
-
     internal DomSlotAssignmentMode _slotAssignment;
-
     internal bool _cloneable;
-
     internal bool _serializable;
 
     public DomShadowRootMode Mode => _mode;
