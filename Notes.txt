@@ -1,0 +1,27 @@
+HTML Engine
+
+- DOM (Document object model)
+	- Identify and separate cross cutting concerns (What concerns DOM, CSS, ECMAScript and others)
+		- E.g.: Mutation observers are a DOM interface, but use concepts of "surrounding agents", which is defined in ECMAScript
+		
+	- Create and adhere to coding standards (check whether they can be implemented or not)
+		- CSTD000: Create constructors with "internal" access modifier when a constructor or initializer function is not specified
+		
+		- CSTD001: Identify which backing fields are necessary, and whether they can be replaced with the C# getter syntax
+		
+		- CSTD002: Decide whether optional fields in DOM interface constructors should be implemented as one of the following:
+			1. Multiple overloaded constructors
+			2. Factory classes
+			3. Constructors with default parameter values
+			
+		- CSTD003: Decide whether DOM types (DOMString, Sequence, etc...) should be their own type or if an extension class is a better approach
+			- Especially callback functions and handlers!
+		
+		- CSTD004: Decide where helper functions should be placed
+			1. As a private function inside the interface class
+			2. As a static function in a static helper class
+			3. Same as 2, but the helper class is inside the interface class
+	
+	- Create and adhere to documentation standards (check whether they can be implemented or not)
+		- DSTD000: Add a link to the function documentation pointing to the respective specification anchor link
+		- DSTD001: Use the defined attributes (DomName, DomInterface, DomImplementedInterfaces, etc...)
